@@ -21,7 +21,7 @@ variable "VPC-CIDR" {
 
 }
 
-variable "Subnet-CIDR" {
+variable "PublicSubnet-CIDR" {
     default = "10.0.1.0/24"
 }
 
@@ -29,3 +29,44 @@ variable "Subnet-AZ" {
     default = "us-east-1a"  
 }
 
+variable "DBSubnet-CIDR" {
+    default = "10.0.11.0/24"
+}
+
+variable "DBSubnet2-CIDR" {
+    default = "10.0.12.0/24"
+}
+
+variable "DBSubnet2-AZ" {
+    default = "us-east-1b"  
+}
+
+variable "DBengine" {
+    default = "mysql"
+}
+
+variable "DBVersion" {
+    default = "8.0.32"
+  
+}
+
+variable "DBInstance" {
+    default = "db.t2.micro"
+  
+}
+
+variable "DBStorageSize" {
+    default = 20
+}
+
+variable "DBStoragetype" {
+    default = "gp2"
+}
+
+variable "DBUser" {
+    default = "admin"
+}
+
+variable "DBPassword" {
+
+}

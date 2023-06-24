@@ -9,11 +9,31 @@ resource "aws_vpc" "WordpressVPC" {
 
 resource "aws_subnet" "PublicSubnet" {
   vpc_id                  = aws_vpc.WordpressVPC.id
-  cidr_block              = var.Subnet-CIDR  # Replace with your desired subnet CIDR block
+  cidr_block              = var.PublicSubnet-CIDR  # Replace with your desired subnet CIDR block
   availability_zone       = var.Subnet-AZ   # Replace with your desired availability zone
 
   tags = {
     Name = "PublicSubnet"
+  }
+}
+
+resource "aws_subnet" "DBSubnet" {
+  vpc_id                  = aws_vpc.WordpressVPC.id
+  cidr_block              = var.DBSubnet-CIDR  # Replace with your desired subnet CIDR block
+  availability_zone       = var.Subnet-AZ   # Replace with your desired availability zone
+
+  tags = {
+    Name = "DBSubnet"
+  }
+}
+
+resource "aws_subnet" "DB2Subnet" {
+  vpc_id                  = aws_vpc.WordpressVPC.id
+  cidr_block              = var.DBSubnet2-CIDR  # Replace with your desired subnet CIDR block
+  availability_zone       = var.DBSubnet2-AZ   # Replace with your desired availability zone
+
+  tags = {
+    Name = "DBSubnet"
   }
 }
 
