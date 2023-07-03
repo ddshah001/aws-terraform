@@ -70,3 +70,12 @@ variable "DBUser" {
 variable "DBPassword" {
 
 }
+
+variable "WP-DB-USER" {
+    default = "wordpress"
+
+}
+
+variable "WP-DB-PASSWORD" {
+
+}

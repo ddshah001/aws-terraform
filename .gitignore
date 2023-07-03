@@ -1,6 +1,7 @@
 Wordpress/secrets.tf
 Wordpress/secrets.tfvars
 Wordpress/terraform.tfvars
+Wordpress/*.pem
 
 
 # Local .terraform directories

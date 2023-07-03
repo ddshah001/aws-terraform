@@ -1,0 +1,2 @@
+#! /bin/bash
+mysql -h ${rds-endpoint} --user=${DBUser} --password=${DBPassword} wordpress  --execute="CREATE USER '${WP-DB-USER}' IDENTIFIED BY '${WP-DB-PASSWORD}'; GRANT ALL PRIVILEGES ON wordpress.* TO wordpress; FLUSH PRIVILEGES;"
